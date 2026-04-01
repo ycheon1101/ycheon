@@ -68,14 +68,18 @@ News
 
 alt = ICPR 2026 logo
 Paper Accepted At ICPR 2026
-Our Paper "Dual-Foundation Models for Unsupervised Domain Adaptation" has been accepted at ICPR 2026.
+Our paper "Dual-Foundation Models for Unsupervised Domain Adaptation" has been accepted at ICPR 2026.
 
 
 ## clients
 
-Clients
+Publications
 
-alt = client logo
+alt = Pipeline figure from accepted paper
+Dual-Foundation Models for Unsupervised Domain Adaptation
+International Conference on Pattern Recognition (ICPR)
+Yerin Cheon, Arun Balasubramanian, and Francois Rameau
+Aug 17, 2026
 
 
 
