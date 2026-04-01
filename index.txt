@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Yerin Cheon
+Yerin Cheon
 Web developer
 
 Show Contacts
