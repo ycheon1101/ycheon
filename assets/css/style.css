@@ -582,7 +582,8 @@ main {
 .testimonials-title { margin-bottom: 20px; }
 
 .news-list {
-  padding-top: 8px;
+  padding-top: 0;
+  margin-top: -14px;
 }
 
 .testimonials-list {
@@ -626,10 +627,10 @@ main {
   text-align: center;
 }
 
-.news-highlight-icon {
+.news-accent-icon {
   display: inline-block;
-  color: var(--orange-yellow-crayola);
-  margin-right: 6px;
+  color: #ff4d4f;
+  margin-left: 8px;
   vertical-align: -2px;
 }
 
