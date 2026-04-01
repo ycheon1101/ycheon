@@ -18,7 +18,7 @@ Location
 Stony Brook, New York, USA
 
 Research Interests
-Computer Vision, Robust Perception, Autonomous Vehicles, Robotics, Sensor Fusiond
+Computer Vision, Robust Perception, Autonomous Vehicles, Robotics, Sensor-Fusion
 
 LinkedIn
 https://www.linkedin.com/in/ycheon
@@ -53,8 +53,8 @@ alt = Multimodal sensor fusion
 Multimodal Sensor Fusion
 Integrating radar, RGB-D, and other sensing modalities for reliable scene understanding.
 
-alt = NLoS imaging and sensing
-NLoS Imaging & Sensing
+alt = Non-line-of-sight imaging icon
+Non-Line-of-Sight Imaging
 Studying perception and scene reconstruction in environments with limited or indirect visibility.
 
 alt = Robotics and autonomous systems
