@@ -4,7 +4,7 @@ vCard - Personal Portfolio
 
 alt = Yerin Cheon
 Yerin Cheon
-Web developer
+M.S. Student @ Stony Brook University
 
 Show Contacts
 
