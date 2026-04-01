@@ -38,7 +38,7 @@ Contact
 
 About me
 
-Hi, I’m Yerin, a master’s student in Computer Science at Stony Brook University with interests in computer vision, multimodal perception, and robotics. My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensor settings.
+Hi, I’m Yerin, a master’s student in Computer Science at Stony Brook University interested in computer vision, multimodal perception, and robotics. My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensor settings.
 
 
 ## service
