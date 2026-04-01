@@ -622,6 +622,29 @@ main {
   text-align: center;
 }
 
+.news-item .content-card {
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.news-item .content-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.news-item .content-card::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  background-image: url("../images/news-icpr2026.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
