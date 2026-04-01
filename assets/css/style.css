@@ -612,6 +612,16 @@ main {
 
 .testimonials-item-title { margin-bottom: 7px; }
 
+.news-item .testimonials-avatar-box {
+  left: 50%;
+  transform: translate(-50%, -25px);
+}
+
+.news-item .testimonials-item-title,
+.news-item .testimonials-text {
+  text-align: center;
+}
+
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -1450,6 +1460,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 10px;
     margin-left: 95px;
   }
+
+  .news-item .testimonials-item-title { margin-left: 0; }
 
   .testimonials-text {
     line-clamp: 2;
