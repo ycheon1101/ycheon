@@ -622,6 +622,97 @@ main {
   text-align: center;
 }
 
+.news-logo-hidden { display: none; }
+
+.news-scene {
+  position: relative;
+  height: 132px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.news-block {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+  height: 66px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0.06), hsla(0, 0%, 100%, 0.02));
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+}
+
+.news-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 10px;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.28), hsla(0, 0%, 0%, 0.55));
+  border-radius: 0 0 12px 12px;
+}
+
+.news-road {
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  bottom: 8px;
+  height: 16px;
+  background: linear-gradient(180deg, hsl(240, 2%, 18%), hsl(240, 2%, 12%));
+  border-radius: 999px;
+}
+
+.news-truck {
+  position: absolute;
+  left: -88px;
+  bottom: 22px;
+  width: 78px;
+  height: 32px;
+  border-radius: 8px;
+  background: hsl(240, 1%, 17%);
+  border: 1px solid hsla(0, 0%, 100%, 0.12);
+  box-shadow: var(--shadow-1);
+  animation: newsTruckDrive 4.2s ease-out forwards;
+}
+
+.news-truck::before,
+.news-truck::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(0, 0%, 8%);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.news-truck::before { left: 9px; }
+.news-truck::after { right: 9px; }
+
+.news-truck-logo {
+  position: absolute;
+  inset: 4px;
+  border-radius: 6px;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.news-truck-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes newsTruckDrive {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(50% + 5px)); }
+}
+
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
