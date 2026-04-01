@@ -31,7 +31,7 @@ https://github.com/ycheon1101
 About
 Resume
 Ongoing
-Blog
+Projects
 Contact
 
 # about
@@ -147,15 +147,15 @@ Web development
 
 
 
-# blog
+# projects
 
-Blog
+Projects
 
-alt = Design conferences in 2022
-Design
-Fab 23, 2022
-Design conferences in 2022
-Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+alt = LiDAR UDA figure
+Robust Perception
+2025
+LiDAR Unsupervised Domain Adaptation for Semantic Segmentation
+Implemented and extended UniMix for adverse-weather 3D LiDAR semantic segmentation, introducing confidence-aware spatial mixing and controllable target-region selection to improve domain adaptation performance by +3.6% mIoU over baseline.
 
 alt = Best fonts every designer
 Design

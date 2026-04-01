@@ -1372,6 +1372,35 @@ main {
   line-height: 1.6;
 }
 
+.project-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.project-pdf-section {
+  margin-top: 14px;
+}
+
+.project-pdf-frame {
+  width: 100%;
+  min-height: 74vh;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  background: var(--eerie-black-1);
+}
+
 
 
 

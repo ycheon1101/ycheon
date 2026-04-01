@@ -157,3 +157,37 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// project pdf view variables
+const projectPdfTriggers = document.querySelectorAll("[data-open-project-pdf]");
+const projectPdfFrame = document.querySelector("[data-project-pdf-frame]");
+const projectBackBtn = document.querySelector("[data-project-back-btn]");
+const projectsPage = document.querySelector("[data-page='projects']");
+
+for (let i = 0; i < projectPdfTriggers.length; i++) {
+  projectPdfTriggers[i].addEventListener("click", function (event) {
+    event.preventDefault();
+    const pdfSrc = this.getAttribute("data-open-project-pdf");
+    if (projectPdfFrame) projectPdfFrame.src = pdfSrc;
+
+    for (let j = 0; j < pages.length; j++) pages[j].classList.remove("active");
+    const detailPage = document.querySelector("[data-page='project-detail']");
+    if (detailPage) detailPage.classList.add("active");
+
+    for (let j = 0; j < navigationLinks.length; j++) {
+      navigationLinks[j].classList.toggle("active", navigationLinks[j].innerHTML.toLowerCase() === "projects");
+    }
+    window.scrollTo(0, 0);
+  });
+}
+
+if (projectBackBtn) {
+  projectBackBtn.addEventListener("click", function () {
+    for (let i = 0; i < pages.length; i++) pages[i].classList.remove("active");
+    if (projectsPage) projectsPage.classList.add("active");
+    for (let i = 0; i < navigationLinks.length; i++) {
+      navigationLinks[i].classList.toggle("active", navigationLinks[i].innerHTML.toLowerCase() === "projects");
+    }
+    window.scrollTo(0, 0);
+  });
+}

@@ -176,7 +176,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
 
           <li class="navbar-item">
@@ -674,10 +674,10 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <article class="blog" data-page="projects">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="blog-posts">
@@ -685,26 +685,26 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" data-open-project-pdf="./assets/pdf/LiDAR_UDA_SS.pdf">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/project-lidar-uda.png" alt="LiDAR UDA figure" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Robust Perception</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2025">2025</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                  <h3 class="h3 blog-item-title">LiDAR Unsupervised Domain Adaptation for Semantic Segmentation</h3>
 
                   <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    Implemented and extended UniMix for adverse-weather 3D LiDAR semantic segmentation, introducing confidence-aware spatial mixing and controllable target-region selection to improve domain adaptation performance by +3.6% mIoU over baseline.
                   </p>
 
                 </div>
@@ -854,6 +854,22 @@
 
           </ul>
 
+        </section>
+
+      </article>
+
+      <article class="project-detail" data-page="project-detail">
+
+        <header class="project-detail-header">
+          <button class="project-back-btn" type="button" data-project-back-btn>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            <span>Back to Projects</span>
+          </button>
+          <h2 class="h2 article-title">Project PDF</h2>
+        </header>
+
+        <section class="project-pdf-section">
+          <iframe class="project-pdf-frame" src="" title="Project PDF" data-project-pdf-frame></iframe>
         </section>
 
       </article>
