@@ -984,6 +984,24 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
+.resume-pdf-section {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-pdf-frame {
+  width: 100%;
+  min-height: 72vh;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  background: var(--eerie-black-1);
+}
+
+.resume-download-link {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+}
+
 
 /**
  * education and experience 
