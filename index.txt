@@ -4,7 +4,7 @@ vCard - Personal Portfolio
 
 alt = Yerin Cheon
 Yerin Cheon
-M.S. Student @ Stony Brook University
+M.S Student @ SBU
 
 Show Contacts
 
