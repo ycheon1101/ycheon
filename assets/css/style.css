@@ -321,7 +321,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 520px; }
 
 .sidebar-info {
   position: relative;
@@ -1333,7 +1333,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 680px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1854,9 +1854,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   .contacts-list { grid-template-columns: 1fr; }
 
   .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .contact-info :is(.contact-link, time, address) {
