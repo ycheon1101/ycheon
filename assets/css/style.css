@@ -683,13 +683,13 @@ main {
   position: absolute;
   left: -130px;
   bottom: 22px;
-  width: 116px;
-  height: 46px;
+  width: 126px;
+  height: 50px;
   border-radius: 8px;
   background: hsl(240, 1%, 17%);
   border: 1px solid hsla(0, 0%, 100%, 0.12);
   box-shadow: var(--shadow-1);
-  animation: newsTruckDrive 9.5s linear infinite;
+  animation: newsTruckDrive 12s linear infinite;
 }
 
 .news-truck::before,
