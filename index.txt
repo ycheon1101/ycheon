@@ -157,35 +157,35 @@ Robust Perception
 LiDAR Unsupervised Domain Adaptation for Semantic Segmentation
 Implemented and extended UniMix for adverse-weather 3D LiDAR semantic segmentation, introducing confidence-aware spatial mixing and controllable target-region selection to improve domain adaptation performance by +3.6% mIoU over baseline.
 
-alt = Best fonts every designer
-Design
-Fab 23, 2022
-Best fonts every designer
-Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+alt = COLMAP-Free 3DGS and Depth Map Analysis figure
+3D Vision
+2025
+COLMAP-Free 3DGS and Depth Map Analysis
+Re-implemented COLMAP-free 3D Gaussian Splatting and benchmarked depth estimation models (MiDaS, ZoeDepth, Depth Anything) on synthetic video sequences, finding ZoeDepth achieved the best performance across PSNR, SSIM, LPIPS.
 
-alt = Design digest #80
-Design
-Fab 23, 2022
-Design digest #80
-Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+alt = Graphcut-based segmentation refinement figure
+Computer Graphics
+2024
+Graphcut-Based Post-Processing for Semantic Segmentation
+Proposed an entropy-based Graph Cut post-processing method for semantic segmentation refinement, achieving +2.64% mIoU over CRF-RNN.
 
-alt = UI interactions of the week
-Design
-Fab 23, 2022
-UI interactions of the week
-Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+alt = Visual question answering pipeline figure
+VQA
+2024
+Visual Question Answering with Zero-shot Models
+Developed a zero-shot visual question answering pipeline using Grounding DINO and SAM, achieving 80.2% accuracy in zero-shot evaluation and outperforming a traditional VGG + LSTM-style baseline on unseen data.
 
-alt = The forgotten art of spacing
-Design
-Fab 23, 2022
-The Forgotten Art Of Spacing
-Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+alt = ML optimization comparison figure
+ML Optimization
+2024
+Evaluating Optimization Algorithm for Machine Learning
+Conducted a comparative analysis of various optimization algorithms on semantic segmentation and image classification tasks, evaluating their generalization performance.
 
-alt = Design digest #79
-Design
-Fab 23, 2022
-Design Digest #79
-Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+alt = Multi-GPU training from scratch figure
+Network / Efficiency
+2023
+Multi-GPU Training from Scratch
+Implemented PyTorch Distributed Data Parallel (DDP) from scratch across 2 GPUs for an 8-layer MLP, resolving memory constraints while maintaining 96% accuracy on MNIST and improving training speed by ~1.7%.
 
 
 
