@@ -683,17 +683,13 @@ main {
   position: absolute;
   left: -170px;
   bottom: 20px;
-  width: 160px;
+  width: 152px;
   height: 62px;
   border-radius: 8px;
   background: hsl(240, 1%, 17%);
   border: 1px solid hsla(0, 0%, 100%, 0.12);
   box-shadow: var(--shadow-1);
-  animation: newsTruckDrive 20s linear infinite;
-}
-
-.news-truck.second {
-  animation-delay: -10s;
+  animation: newsTruckDrive 12s linear infinite;
 }
 
 .news-truck::before,
@@ -713,9 +709,10 @@ main {
 
 .news-truck-logo {
   position: absolute;
-  left: 12px;
+  left: 50%;
   top: 10px;
-  width: 90px;
+  transform: translateX(-50%);
+  width: 100px;
   height: 42px;
   border-radius: 6px;
   background: hsl(0, 0%, 100%);
