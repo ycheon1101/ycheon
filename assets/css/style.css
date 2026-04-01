@@ -631,6 +631,17 @@ main {
   overflow: hidden;
 }
 
+.news-cloud {
+  position: absolute;
+  top: 2px;
+  color: #56a8ff;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+.news-cloud.cloud-1 { left: 24px; }
+.news-cloud.cloud-2 { right: 28px; font-size: 15px; }
+
 .news-block {
   position: absolute;
   left: 0;
@@ -679,38 +690,42 @@ main {
   opacity: 0.9;
 }
 
+.news-streetlight {
+  position: absolute;
+  bottom: 20px;
+  width: 22px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.news-streetlight.light-1 { left: 34px; }
+.news-streetlight.light-2 { right: 42px; }
+
 .news-truck {
   position: absolute;
-  left: -130px;
-  bottom: 22px;
-  width: 116px;
-  height: 46px;
-  border-radius: 8px;
-  background: hsl(240, 1%, 17%);
-  border: 1px solid hsla(0, 0%, 100%, 0.12);
-  box-shadow: var(--shadow-1);
-  animation: newsTruckDrive 6.5s linear infinite;
+  left: -150px;
+  bottom: 20px;
+  width: 130px;
+  height: 58px;
+  background-image: url("../images/news-truck-icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: newsTruckDrive 8s linear infinite;
 }
 
 .news-truck::before,
 .news-truck::after {
-  content: "";
-  position: absolute;
-  bottom: -9px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: hsl(0, 0%, 8%);
-  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  content: none;
 }
-
-.news-truck::before { left: 11px; }
-.news-truck::after { right: 11px; }
 
 .news-truck-logo {
   position: absolute;
-  inset: 3px;
-  border-radius: 6px;
+  left: 10px;
+  top: 8px;
+  width: 64px;
+  height: 34px;
+  border-radius: 5px;
   background: hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
@@ -725,7 +740,7 @@ main {
 }
 
 @keyframes newsTruckDrive {
-  0% { left: -130px; opacity: 1; }
+  0% { left: -150px; opacity: 1; }
   85% { left: calc(100% + 12px); opacity: 1; }
   100% { left: calc(100% + 12px); opacity: 0; }
 }
