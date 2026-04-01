@@ -542,12 +542,9 @@ main {
 
 .service-icon-box { margin-bottom: 10px; }
 
-.service-icon-box img { margin: auto; }
-
 .service-icon-box ion-icon {
   margin: auto;
-  font-size: 40px;
-  color: var(--orange-yellow-crayola);
+  font-size: 18px;
 }
 
 .service-content-box { text-align: center; }
