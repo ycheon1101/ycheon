@@ -597,7 +597,7 @@ main {
 
 .testimonials-list.news-list {
   margin: 0 -15px;
-  padding: 6px 15px 35px;
+  padding: 6px 15px 20px;
 }
 
 .testimonials-item {
@@ -630,8 +630,9 @@ main {
 .news-accent-icon {
   display: inline-block;
   color: #ff4d4f;
-  margin-left: 8px;
-  vertical-align: -2px;
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: -3px;
 }
 
 .news-logo-hidden { display: none; }
@@ -1570,7 +1571,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-list.news-list {
     margin: 0 -30px;
-    padding: 8px 30px 35px;
+    padding: 8px 30px 24px;
   }
 
   .content-card {
