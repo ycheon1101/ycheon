@@ -622,6 +622,18 @@ main {
   text-align: center;
 }
 
+.news-item .testimonials-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-item .testimonials-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .news-logo-hidden { display: none; }
 
 .news-scene {
