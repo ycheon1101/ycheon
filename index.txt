@@ -9,16 +9,16 @@ Graduate Student Researcher
 Show Contacts
 
 Email
-richard@example.com
+ycheon@cs.stonybrook.edu
 
 Phone
-+1 (213) 352-2795
-
-Birthday
-June 23, 1982
++1 (631) 871-8551
 
 Location
-Sacramento, California, USA
+Stony Brook, New York, USA
+
+Research Interest
+Computer Vision, Robust Perception, Robotics, Sensor Fusion
 
 # navbar
 
