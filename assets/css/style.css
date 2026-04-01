@@ -1113,6 +1113,28 @@ main {
 
 .filter-list { display: none; }
 
+.ongoing-notice {
+  margin-bottom: 14px;
+}
+
+.ongoing-text {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ongoing-icon {
+  color: #ff4d4f;
+  font-size: 20px;
+}
+
+.ongoing-projects-hidden {
+  display: none;
+}
+
 .filter-select-box {
   position: relative;
   margin-bottom: 25px;

@@ -30,7 +30,7 @@ https://github.com/ycheon1101
 
 About
 Resume
-Portfolio
+Ongoing
 Blog
 Contact
 
@@ -94,7 +94,9 @@ Embedded PDF resume:
 
 # portfolio
 
-Portfolio
+Ongoing
+
+Coming Soon...
 
 All
 Web design
