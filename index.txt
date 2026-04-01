@@ -77,8 +77,8 @@ Publications
 
 alt = Pipeline figure from accepted paper
 Dual-Foundation Models for Unsupervised Domain Adaptation
-International Conference on Pattern Recognition (ICPR)
-Yerin Cheon, Arun Balasubramanian, and Francois Rameau
+International Conference on Pattern Recognition (ICPR 2026)
+Yerin Cheon, Aruna Balasubramanian, and Francois Rameau
 Aug 17, 2026
 
 

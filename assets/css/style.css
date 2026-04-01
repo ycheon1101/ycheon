@@ -966,6 +966,14 @@ main {
   color: var(--white-2);
 }
 
+.publications .clients-title {
+  margin-bottom: 18px;
+}
+
+.publication-content {
+  padding-left: 8px;
+}
+
 
 
 
