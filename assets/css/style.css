@@ -548,8 +548,16 @@ main {
 }
 
 .service .service-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 48px;
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   border-radius: 12px;
 }
 
@@ -559,7 +567,7 @@ main {
 
 .service-item-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: 14px;
   font-weight: var(--fw-3);
   line-height: 1.6;
 }
