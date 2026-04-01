@@ -665,15 +665,15 @@ main {
 
 .news-truck {
   position: absolute;
-  left: -88px;
+  left: 0;
   bottom: 22px;
-  width: 78px;
-  height: 32px;
+  width: 96px;
+  height: 38px;
   border-radius: 8px;
   background: hsl(240, 1%, 17%);
   border: 1px solid hsla(0, 0%, 100%, 0.12);
   box-shadow: var(--shadow-1);
-  animation: newsTruckDrive 4.2s ease-out forwards;
+  animation: newsTruckDrive 5s linear infinite alternate;
 }
 
 .news-truck::before,
@@ -693,7 +693,7 @@ main {
 
 .news-truck-logo {
   position: absolute;
-  inset: 4px;
+  inset: 3px;
   border-radius: 6px;
   background: hsl(0, 0%, 100%);
   display: flex;
@@ -710,7 +710,7 @@ main {
 
 @keyframes newsTruckDrive {
   0% { transform: translateX(0); }
-  100% { transform: translateX(calc(50% + 5px)); }
+  100% { transform: translateX(calc(100% - 96px)); }
 }
 
 .testimonials-text {
