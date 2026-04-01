@@ -68,7 +68,7 @@ News
 
 alt = ICPR 2026 logo
 Paper Accepted at ICPR 2026
-Our paper has been accepted at ICPR 2026.
+Our Paper "Dual-Foundation Models for Unsupervised Domain Adaptation" has been accepted at ICPR 2026.
 
 
 ## clients
