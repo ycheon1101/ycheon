@@ -581,11 +581,6 @@ main {
 
 .testimonials-title { margin-bottom: 20px; }
 
-.news-list {
-  margin: 0 -15px;
-  padding: 0 15px 35px;
-}
-
 .testimonials-list {
   display: flex;
   justify-content: flex-start;
@@ -598,6 +593,11 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+}
+
+.testimonials-list.news-list {
+  margin: 0 -15px;
+  padding: 6px 15px 35px;
 }
 
 .testimonials-item {
@@ -1566,6 +1566,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 0 -30px;
     padding: 30px;
     padding-bottom: 35px;
+  }
+
+  .testimonials-list.news-list {
+    margin: 0 -30px;
+    padding: 8px 30px 35px;
   }
 
   .content-card {
