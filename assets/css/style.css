@@ -937,7 +937,7 @@ main {
   height: 92px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   background: hsl(0, 0%, 100%);
 }
 
@@ -967,11 +967,11 @@ main {
 }
 
 .publications .clients-title {
-  margin-bottom: 18px;
+  margin-bottom: 30px !important;
 }
 
 .publication-content {
-  padding-left: 8px;
+  padding-left: 18px;
 }
 
 
@@ -1710,7 +1710,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .publication-item {
     display: grid;
     grid-template-columns: 180px 1fr;
-    gap: 14px;
+    gap: 24px;
     align-items: center;
   }
 
