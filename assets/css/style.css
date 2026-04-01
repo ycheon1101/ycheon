@@ -544,7 +544,13 @@ main {
 
 .service-icon-box ion-icon {
   margin: auto;
-  font-size: 18px;
+  font-size: 22px;
+}
+
+.service .service-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
 }
 
 .service-content-box { text-align: center; }
