@@ -663,19 +663,18 @@ main {
   --news-road-h: 16px;
   --news-truck-bottom: 20px;
   --news-truck-h: 62px;
+  /* distance below the top edge of .news-block (smaller = higher on the scene) */
+  --news-date-from-block-top: 3px;
 }
 
 .news-scene-date {
   position: absolute;
-  /* vertical center of the gap between the facade (big box) and the truck box */
+  /* anchor to the big box’s top edge, then nudge down (no vertical centering math) */
   top: calc(
-    (
-      (100% - var(--news-block-bottom) - var(--news-block-h)) +
-      (100% - var(--news-truck-bottom) - var(--news-truck-h))
-    ) / 2
+    (100% - var(--news-block-bottom) - var(--news-block-h)) + var(--news-date-from-block-top)
   );
   left: 10px;
-  transform: translateY(-50%);
+  transform: none;
   z-index: 2;
   display: inline-flex;
   align-items: center;
