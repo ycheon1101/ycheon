@@ -656,20 +656,22 @@ main {
   height: 132px;
   margin-bottom: 14px;
   overflow: hidden;
-  /* align with .news-block / .news-road so date can sit between them */
+  /* layout vars shared by block, road, truck, date */
   --news-block-bottom: 26px;
   --news-block-h: 66px;
   --news-road-bottom: 8px;
   --news-road-h: 16px;
+  --news-truck-bottom: 20px;
+  --news-truck-h: 62px;
 }
 
 .news-scene-date {
   position: absolute;
-  /* vertical center between top of facade block and top of road (truck lane) */
+  /* vertical center of the gap between the facade (big box) and the truck box */
   top: calc(
     (
       (100% - var(--news-block-bottom) - var(--news-block-h)) +
-      (100% - var(--news-road-bottom) - var(--news-road-h))
+      (100% - var(--news-truck-bottom) - var(--news-truck-h))
     ) / 2
   );
   left: 10px;
@@ -744,9 +746,9 @@ main {
 .news-truck {
   position: absolute;
   left: -170px;
-  bottom: 20px;
+  bottom: var(--news-truck-bottom);
   width: 152px;
-  height: 62px;
+  height: var(--news-truck-h);
   border-radius: 8px;
   background: hsl(240, 1%, 17%);
   border: 1px solid hsla(0, 0%, 100%, 0.12);
