@@ -663,7 +663,7 @@ main {
   --news-road-h: 16px;
   --news-truck-bottom: 20px;
   --news-truck-h: 62px;
-  --news-date-nudge-up: 5px;
+  --news-date-nudge-up: 8px;
 }
 
 .news-scene-date {
