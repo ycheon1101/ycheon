@@ -663,6 +663,7 @@ main {
   --news-road-h: 16px;
   --news-truck-bottom: 20px;
   --news-truck-h: 62px;
+  --news-date-nudge-up: 5px;
 }
 
 .news-scene-date {
@@ -672,7 +673,7 @@ main {
    *   - outer “news box” (.news-scene top)
    *   - inner “big box” (.news-block top edge)
    */
-  top: calc((100% - var(--news-block-bottom) - var(--news-block-h)) / 2);
+  top: calc((100% - var(--news-block-bottom) - var(--news-block-h)) / 2 - var(--news-date-nudge-up));
   left: 10px;
   transform: translateY(-50%);
   z-index: 2;
