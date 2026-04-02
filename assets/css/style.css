@@ -325,41 +325,6 @@ main {
   padding-bottom: 2px;
 }
 
-.name-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.name-row .name {
-  margin-bottom: 0;
-}
-
-/* Inline social: shown on smaller layouts */
-.social-inline {
-  padding-left: 0;
-  padding-bottom: 0;
-}
-
-/* Wide social: shown under Research Interests on desktop row layout */
-.sidebar-social-wide {
-  display: none;
-  padding-left: 0;
-  padding-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .social-inline { display: none; }
-  .sidebar-social-wide { display: flex; }
-}
-
-/* When sidebar turns into column layout, put icons next to the name again */
-@media (min-width: 1250px) {
-  .social-inline { display: flex; }
-  .sidebar-social-wide { display: none; }
-  .name-row { justify-content: center; }
-}
-
 .sidebar-info {
   position: relative;
   display: flex;
