@@ -656,12 +656,24 @@ main {
   height: 132px;
   margin-bottom: 14px;
   overflow: hidden;
+  /* align with .news-block / .news-road so date can sit between them */
+  --news-block-bottom: 26px;
+  --news-block-h: 66px;
+  --news-road-bottom: 8px;
+  --news-road-h: 16px;
 }
 
 .news-scene-date {
   position: absolute;
-  top: 8px;
+  /* vertical center between top of facade block and top of road (truck lane) */
+  top: calc(
+    (
+      (100% - var(--news-block-bottom) - var(--news-block-h)) +
+      (100% - var(--news-road-bottom) - var(--news-road-h))
+    ) / 2
+  );
   left: 10px;
+  transform: translateY(-50%);
   z-index: 2;
   display: inline-flex;
   align-items: center;
@@ -685,8 +697,8 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 26px;
-  height: 66px;
+  bottom: var(--news-block-bottom);
+  height: var(--news-block-h);
   border-radius: 12px;
   background: linear-gradient(180deg, hsla(0, 0%, 100%, 0.06), hsla(0, 0%, 100%, 0.02));
   border: 1px solid hsla(0, 0%, 100%, 0.08);
@@ -707,8 +719,8 @@ main {
   position: absolute;
   left: -12px;
   right: -12px;
-  bottom: 8px;
-  height: 16px;
+  bottom: var(--news-road-bottom);
+  height: var(--news-road-h);
   background: linear-gradient(180deg, hsl(240, 2%, 18%), hsl(240, 2%, 12%));
   border-radius: 999px;
 }
