@@ -627,6 +627,15 @@ main {
   text-align: center;
 }
 
+/* Preserve "at" (CSS capitalize would force "At") */
+.news-item .testimonials-item-title {
+  text-transform: none;
+}
+
+.testimonials-modal .modal-title {
+  text-transform: none;
+}
+
 .news-accent-icon {
   display: inline-block;
   color: #ff4d4f;
