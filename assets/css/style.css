@@ -658,6 +658,19 @@ main {
   overflow: hidden;
 }
 
+.news-scene-date {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  color: var(--light-gray-70);
+  pointer-events: none;
+}
+
 .news-block {
   position: absolute;
   left: 0;
