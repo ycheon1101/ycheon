@@ -499,7 +499,7 @@ main {
 
 .about-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: calc(var(--fs-6) + 1px);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
