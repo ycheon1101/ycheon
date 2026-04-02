@@ -663,18 +663,18 @@ main {
   --news-road-h: 16px;
   --news-truck-bottom: 20px;
   --news-truck-h: 62px;
-  /* distance below the top edge of .news-block (smaller = higher on the scene) */
-  --news-date-from-block-top: 3px;
 }
 
 .news-scene-date {
   position: absolute;
-  /* anchor to the big box’s top edge, then nudge down (no vertical centering math) */
-  top: calc(
-    (100% - var(--news-block-bottom) - var(--news-block-h)) + var(--news-date-from-block-top)
-  );
+  /*
+   * Vertical center of the band between:
+   *   - outer “news box” (.news-scene top)
+   *   - inner “big box” (.news-block top edge)
+   */
+  top: calc((100% - var(--news-block-bottom) - var(--news-block-h)) / 2);
   left: 10px;
-  transform: none;
+  transform: translateY(-50%);
   z-index: 2;
   display: inline-flex;
   align-items: center;
