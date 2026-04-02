@@ -630,6 +630,11 @@ main {
 /* Preserve "at" (CSS capitalize would force "At") */
 .news-item .testimonials-item-title {
   text-transform: none;
+  font-size: calc(var(--fs-4) - 1px);
+}
+
+.news-item .testimonials-text {
+  font-size: calc(var(--fs-6) - 1px);
 }
 
 .testimonials-modal .modal-title {
