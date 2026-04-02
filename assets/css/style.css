@@ -316,12 +316,14 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 520px; }
+.sidebar-social {
+  margin-top: 4px;
+  padding-bottom: 2px;
+}
 
 .sidebar-info {
   position: relative;
@@ -387,12 +389,15 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-2);
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .sidebar.active .sidebar-info_more {
+  max-height: 2000px;
   opacity: 1;
   visibility: visible;
 }
@@ -1667,11 +1672,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
     margin-bottom: 30px;
   }
-
-  .sidebar.active { max-height: 680px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -2204,8 +2206,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   .info_more-btn { display: none; }
 
   .sidebar-info_more {
+    max-height: none;
     opacity: 1;
     visibility: visible;
+    overflow: visible;
   }
 
   .contacts-list { grid-template-columns: 1fr; }
