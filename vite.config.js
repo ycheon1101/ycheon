@@ -7,4 +7,25 @@ export default defineConfig({
     open: true,
     port: 5173,
   },
+  plugins: [
+    {
+      name: "spa-fallback",
+      configureServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          const raw = req.url && req.url.split("?")[0];
+          if (
+            raw &&
+            raw !== "/" &&
+            !raw.startsWith("/@") &&
+            !raw.startsWith("/assets") &&
+            !raw.startsWith("/node_modules") &&
+            !raw.includes(".")
+          ) {
+            req.url = "/index.html";
+          }
+          next();
+        });
+      },
+    },
+  ],
 });

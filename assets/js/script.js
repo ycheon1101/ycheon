@@ -136,58 +136,109 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+// page navigation + URL sync (paths like /ycheon/projects on GitHub Pages)
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+const PAGE_KEYS = new Set([
+  "about",
+  "resume",
+  "ongoing",
+  "projects",
+  "contact",
+  "project-detail",
+]);
 
-// add event to all nav link
+function normalizePathname() {
+  let p = window.location.pathname;
+  if (p.endsWith("/index.html")) {
+    p = p.slice(0, -"/index.html".length) || "/";
+  }
+  return p.replace(/\/$/, "") || "/";
+}
+
+function computeAppBase() {
+  const pathname = normalizePathname();
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length && PAGE_KEYS.has(segments[segments.length - 1])) {
+    segments.pop();
+  }
+  if (segments.length === 0) return "/";
+  return "/" + segments.join("/") + "/";
+}
+
+const appBase = computeAppBase();
+
+function getPageFromPath() {
+  const pathname = normalizePathname();
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length && PAGE_KEYS.has(segments[segments.length - 1])) {
+    return segments[segments.length - 1];
+  }
+  return "about";
+}
+
+function buildPageUrl(pageKey) {
+  if (appBase === "/") {
+    return "/" + pageKey;
+  }
+  return appBase.replace(/\/$/, "") + "/" + pageKey;
+}
+
+function setActivePage(pageKey) {
+  for (let i = 0; i < pages.length; i++) {
+    pages[i].classList.toggle("active", pages[i].dataset.page === pageKey);
+  }
+  for (let i = 0; i < navigationLinks.length; i++) {
+    const label = navigationLinks[i].innerHTML.toLowerCase();
+    const navMatch =
+      pageKey === "project-detail" ? label === "projects" : label === pageKey;
+    navigationLinks[i].classList.toggle("active", navMatch);
+  }
+  window.scrollTo(0, 0);
+}
+
+function showPage(pageKey, options) {
+  const replace = options && options.replace;
+  const skipHistory = options && options.skipHistory;
+  setActivePage(pageKey);
+  if (skipHistory) return;
+  const url = buildPageUrl(pageKey);
+  if (replace) {
+    history.replaceState({ page: pageKey }, "", url);
+  } else {
+    history.pushState({ page: pageKey }, "", url);
+  }
+}
+
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
+    const pageKey = this.innerHTML.toLowerCase();
+    showPage(pageKey);
   });
 }
+
+window.addEventListener("popstate", function () {
+  showPage(getPageFromPath(), { skipHistory: true });
+});
 
 // project pdf view variables
 const projectPdfTriggers = document.querySelectorAll("[data-open-project-pdf]");
 const projectPdfFrame = document.querySelector("[data-project-pdf-frame]");
 const projectBackBtn = document.querySelector("[data-project-back-btn]");
-const projectsPage = document.querySelector("[data-page='projects']");
 
 for (let i = 0; i < projectPdfTriggers.length; i++) {
   projectPdfTriggers[i].addEventListener("click", function (event) {
     event.preventDefault();
     const pdfSrc = this.getAttribute("data-open-project-pdf");
     if (projectPdfFrame) projectPdfFrame.src = pdfSrc;
-
-    for (let j = 0; j < pages.length; j++) pages[j].classList.remove("active");
-    const detailPage = document.querySelector("[data-page='project-detail']");
-    if (detailPage) detailPage.classList.add("active");
-
-    for (let j = 0; j < navigationLinks.length; j++) {
-      navigationLinks[j].classList.toggle("active", navigationLinks[j].innerHTML.toLowerCase() === "projects");
-    }
-    window.scrollTo(0, 0);
+    showPage("project-detail");
   });
 }
 
 if (projectBackBtn) {
   projectBackBtn.addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) pages[i].classList.remove("active");
-    if (projectsPage) projectsPage.classList.add("active");
-    for (let i = 0; i < navigationLinks.length; i++) {
-      navigationLinks[i].classList.toggle("active", navigationLinks[i].innerHTML.toLowerCase() === "projects");
-    }
-    window.scrollTo(0, 0);
+    showPage("projects");
   });
 }
+
+showPage(getPageFromPath(), { skipHistory: true });
