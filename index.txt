@@ -38,7 +38,9 @@ Contact
 
 Yerin Cheon
 
-Hi, I’m Yerin Cheon, a master’s student in Computer Science at Stony Brook University interested in computer vision, multimodal perception, and robotics. My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensor settings.
+Hi, I’m Yerin Cheon, a master’s student in Computer Science at Stony Brook University. I’m interested in computer vision, multimodal perception, and robotics.
+
+My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensing.
 
 
 ## service
