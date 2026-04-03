@@ -26,7 +26,7 @@ https://www.linkedin.com/in/ycheon
 GitHub
 https://github.com/ycheon1101
 
-Resume (PDF, sidebar icon ??new tab)
+Resume (PDF, sidebar icon - new tab)
 ./assets/pdf/Resume_YerinCheon.pdf
 
 # navbar
@@ -41,7 +41,7 @@ Contact
 
 Yerin Cheon
 
-Hi, I?™m Yerin Cheon, a master?™s student in Computer Science at Stony Brook University. I?™m interested in computer vision, multimodal perception, and robotics. My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensing.
+Hi, I??m Yerin Cheon, a master??s student in Computer Science at Stony Brook University. I??m interested in computer vision, multimodal perception, and robotics. My work focuses on building robust perception systems for challenging real-world environments, including domain shifts, occlusions, and multimodal sensing.
 
 
 ## service
@@ -102,7 +102,7 @@ Publications
 
 ICPR 2026 Â· 2026
 Dual-Foundation Models for Unsupervised Domain Adaptation
-Yerin Cheon, Aruna Balasubramanian, and Francois Rameau. International Conference on Pattern Recognition (ICPR 2026). Conference dates: Aug 17??0, 2026.
+Yerin Cheon, Aruna Balasubramanian, and Francois Rameau. International Conference on Pattern Recognition (ICPR 2026). Conference dates: Aug 17-20, 2026.
 
 alt = Pipeline figure from Dual-Foundation Models paper
 
