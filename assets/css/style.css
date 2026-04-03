@@ -2268,27 +2268,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /**
- * Sidebar social: match .icon-box scale (30px default, 48px from 580px up).
- * Narrow sticky column (≥1250): smaller row so three icons fit the strip.
+ * Sidebar social: profile row / avatar left (max-width 1249px) → 30px; column (min-width 1250px) → 20px.
  */
 .sidebar .social-svg {
   display: block;
   flex-shrink: 0;
 }
 
-@media (max-width: 579px) {
+@media (max-width: 1249px) {
   .sidebar .social-svg,
   .sidebar .social-link-resume .social-resume-img {
     width: 30px;
     height: 30px;
-  }
-}
-
-@media (min-width: 580px) and (max-width: 1249px) {
-  .sidebar .social-svg,
-  .sidebar .social-link-resume .social-resume-img {
-    width: 48px;
-    height: 48px;
   }
 }
 
