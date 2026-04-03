@@ -458,6 +458,15 @@ main {
   padding-left: 0;
 }
 
+/* Match avatar img width; space-between → LinkedIn left / resume right align to photo edges */
+.social-list.sidebar-social {
+  width: 80px;
+  max-width: 100%;
+  justify-content: space-between;
+  gap: 0;
+  box-sizing: border-box;
+}
+
 .social-item .social-link {
   color: var(--light-gray-70);
 }
@@ -1715,6 +1724,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 120px; }
 
+  .social-list.sidebar-social { width: 120px; }
+
   .info-content .name { margin-bottom: 15px; }
 
   .info-content .title { padding: 5px 18px; }
@@ -2228,6 +2239,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
+  .avatar-box {
+    display: flex;
+    justify-content: center;
+  }
+
   .avatar-box img { width: 150px; }
 
   .info-content .name {
@@ -2265,6 +2281,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .social-list { justify-content: center; }
+
+  .social-list.sidebar-social {
+    width: 150px;
+    justify-content: space-between;
+    margin-inline: auto;
+  }
 
 
 
