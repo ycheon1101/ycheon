@@ -448,6 +448,19 @@ main {
   font-size: 20px;
 }
 
+.social-link-resume .social-resume-img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(0.72);
+}
+
+.social-link-resume:hover .social-resume-img,
+.social-link-resume:focus .social-resume-img {
+  filter: brightness(0) invert(0.88);
+}
+
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
