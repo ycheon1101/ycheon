@@ -354,8 +354,22 @@ main {
   padding-bottom: 0;
 }
 
-/* Wider sidebar: don't stretch social row edge-to-edge (avoids huge gaps between icons) */
-@media (min-width: 580px) {
+/* Small screens: full-width bar, icons at edges (like before) */
+@media (max-width: 767px) {
+  .sidebar-card.sidebar-icons-card {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .sidebar-icons-card .social-list.sidebar-social {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+/* Tablet/desktop: compact centered strip (no huge gaps between icons) */
+@media (min-width: 768px) {
   .sidebar-card.sidebar-icons-card {
     width: fit-content;
     max-width: 100%;
