@@ -1,27 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <!-- CV on document, folded top-right; transparent background -->
-  <path
+  <!-- Resume / notebook: border, binding dots, avatar + lines; no background -->
+  <rect
+    x="3.85"
+    y="3.35"
+    width="16.3"
+    height="17.3"
+    rx="1.35"
+    ry="1.35"
     stroke="#000"
-    stroke-width="1.4"
-    stroke-linejoin="round"
-    d="M4.75 3.75h8.5l6 6v10.5h-14.5v-16.5z"
+    stroke-width="1.25"
   />
+  <!-- Spiral / binding dots (left margin) -->
+  <circle cx="5.35" cy="6.1" r="0.42" fill="#000"/>
+  <circle cx="5.35" cy="8.35" r="0.42" fill="#000"/>
+  <circle cx="5.35" cy="10.6" r="0.42" fill="#000"/>
+  <circle cx="5.35" cy="12.85" r="0.42" fill="#000"/>
+  <circle cx="5.35" cy="15.1" r="0.42" fill="#000"/>
+  <circle cx="5.35" cy="17.35" r="0.42" fill="#000"/>
+  <!-- Person -->
+  <circle cx="9.35" cy="6.85" r="1.25" stroke="#000" stroke-width="1.05" fill="none"/>
   <path
     stroke="#000"
-    stroke-width="1.4"
+    stroke-width="1.05"
     stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M13.25 3.75v6h6"
+    d="M7.15 10.35c0.55-1.1 1.55-1.65 2.2-1.65h0c0.65 0 1.65 0.55 2.2 1.65"
   />
-  <text
-    x="12"
-    y="11.2"
-    text-anchor="middle"
-    font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
-    font-size="6.2"
-    font-weight="700"
-    fill="#000"
-  >CV</text>
-  <rect x="5.25" y="13.85" width="13.5" height="2.35" rx="1.15" fill="#000"/>
-  <rect x="5.25" y="17.15" width="13.5" height="2.35" rx="1.15" fill="#000"/>
+  <!-- Short header lines -->
+  <path stroke="#000" stroke-width="1.05" stroke-linecap="round" d="M12.1 5.85h5.4M12.1 7.35h4.2M12.1 8.85h5.1"/>
+  <!-- Body text lines -->
+  <path stroke="#000" stroke-width="1.1" stroke-linecap="round" d="M7.85 12.35h10.3M7.85 14.35h10.3M7.85 16.35h9.2M7.85 18.35h6.8"/>
 </svg>
