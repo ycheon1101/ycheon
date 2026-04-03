@@ -328,14 +328,14 @@ main {
   gap: 15px;
 }
 
-/* Left column: profile+contacts card, then icons card (same width as column) */
-.sidebar-primary-col {
-  display: inline-flex;
+/* Below profile row: two cards (contacts, then icons), same width */
+.sidebar-cards-stack {
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
+  width: 100%;
   max-width: 100%;
-  flex-shrink: 0;
 }
 
 .sidebar-card {
@@ -346,20 +346,8 @@ main {
   background: hsla(240, 1%, 17%, 0.45);
 }
 
-.sidebar-profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
+.sidebar-contacts-card {
   padding: 12px;
-}
-
-.sidebar-profile-card .avatar-box {
-  align-self: center;
-}
-
-.sidebar-profile-card .sidebar-info_more {
-  margin-top: 4px;
 }
 
 .sidebar-icons-card {
@@ -368,6 +356,14 @@ main {
 
 .sidebar-icons-card .social-list {
   padding-bottom: 0;
+}
+
+@media (max-width: 1249px) {
+  .sidebar:not(.active) .sidebar-contacts-card {
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+  }
 }
 
 .avatar-box {
@@ -2272,8 +2268,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .sidebar-primary-col {
+  .sidebar-cards-stack {
     align-self: center;
+    width: 100%;
   }
 
   .avatar-box {
