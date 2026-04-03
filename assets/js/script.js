@@ -25,33 +25,74 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalDate = document.querySelector("[data-modal-date]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+// modal open/close (avoid toggle while clicking inside the open modal)
+const testimonialsModalOpen = function () {
+  modalContainer.classList.add("active");
+  overlay.classList.add("active");
 }
+
+const testimonialsModalClose = function () {
+  modalContainer.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+const openTestimonialsModalFrom = function (itemEl) {
+  const avatarEl = itemEl.querySelector("[data-testimonials-avatar]");
+  const titleEl = itemEl.querySelector("[data-testimonials-title]");
+  const dateEl = itemEl.querySelector("[data-testimonials-date]");
+  const textEl = itemEl.querySelector("[data-testimonials-text]");
+  const extraEl = itemEl.querySelector("[data-testimonials-extra]");
+  if (!avatarEl || !titleEl || !textEl) { return; }
+
+  modalImg.src = avatarEl.src;
+  modalImg.alt = avatarEl.alt;
+  modalTitle.innerHTML = titleEl.innerHTML;
+  if (modalDate && dateEl) {
+    modalDate.dateTime = dateEl.dateTime || dateEl.getAttribute("datetime") || "";
+    modalDate.innerHTML = dateEl.innerHTML;
+  }
+  modalText.innerHTML = textEl.innerHTML;
+  if (extraEl) {
+    modalText.insertAdjacentHTML("beforeend", extraEl.innerHTML);
+  }
+  // Keep a visible closing quote icon at the end of modal text.
+  const firstParagraph = modalText.querySelector("p");
+  if (firstParagraph && !firstParagraph.querySelector(".modal-quote-end-inline")) {
+    firstParagraph.insertAdjacentHTML(
+      "beforeend",
+      '<img src="./assets/images/icon-quote.svg" class="modal-quote-end-inline" alt="" aria-hidden="true">'
+    );
+  }
+
+  testimonialsModalOpen();
+};
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
 
+  if (testimonialsItem[i].closest(".news-item")) { continue; }
+
   testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
+    openTestimonialsModalFrom(this);
   });
 
 }
 
+// News: icon opens modal; news card itself is not clickable
+const newsMoreBtn = document.querySelector("[data-news-more-btn]");
+const newsCardModalRoot = document.querySelector(".news-item [data-testimonials-item]");
+if (newsMoreBtn && newsCardModalRoot) {
+  newsMoreBtn.addEventListener("click", function () {
+    openTestimonialsModalFrom(newsCardModalRoot);
+  });
+}
+
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", testimonialsModalClose);
+overlay.addEventListener("click", testimonialsModalClose);
 
 
 
