@@ -26,13 +26,15 @@ https://www.linkedin.com/in/ycheon
 GitHub
 https://github.com/ycheon1101
 
+Resume (PDF, sidebar icon — new tab)
+./assets/pdf/Resume_YerinCheon.pdf
+
 # navbar
 
 About
 Publications
 Projects
 Ongoing
-Resume
 Contact
 
 # about
@@ -93,15 +95,6 @@ Dual-Foundation Models for Unsupervised Domain Adaptation
 Yerin Cheon, Aruna Balasubramanian, and Francois Rameau. International Conference on Pattern Recognition (ICPR 2026). Conference dates: Aug 17–20, 2026.
 
 alt = Pipeline figure from Dual-Foundation Models paper
-
-
-# resume
-
-Resume
-
-Embedded PDF resume:
-./assets/pdf/Resume_YerinCheon.pdf
-
 
 
 # portfolio

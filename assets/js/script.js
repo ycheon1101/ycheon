@@ -142,7 +142,6 @@ const pages = document.querySelectorAll("[data-page]");
 const PAGE_KEYS = new Set([
   "about",
   "publications",
-  "resume",
   "ongoing",
   "projects",
   "contact",
