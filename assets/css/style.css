@@ -621,6 +621,14 @@ main {
   font-size: 22px;
 }
 
+.service-icon-box img {
+  margin: auto;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
 .service .service-icon-box {
   display: flex;
   justify-content: center;
