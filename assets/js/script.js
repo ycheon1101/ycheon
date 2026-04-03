@@ -196,20 +196,90 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 // contact form variables
 const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+/**
+ * Contact form → email via Web3Forms (static-site friendly).
+ * 1) Sign up at https://web3forms.com with ycheon@cs.stonybrook.edu
+ * 2) Paste the Access Key below (enable “Restrict to domain” for your site).
+ */
+const WEB3FORMS_ACCESS_KEY = "60e05351-127b-44a2-b3b5-3f7e5c9831fa";
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
+const formFeedback = document.querySelector("[data-form-feedback]");
+
+function setFormFeedback(state, message) {
+  if (!formFeedback) return;
+  if (!message) {
+    formFeedback.hidden = true;
+    formFeedback.textContent = "";
+    delete formFeedback.dataset.state;
+    return;
+  }
+  formFeedback.hidden = false;
+  formFeedback.dataset.state = state;
+  formFeedback.textContent = message;
+}
+
+if (form && formBtn) {
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    setFormFeedback("", "");
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
     }
 
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setFormFeedback(
+        "error",
+        "Email sending is not set up yet. Add your Web3Forms access key in assets/js/script.js (see https://web3forms.com), or email ycheon@cs.stonybrook.edu directly."
+      );
+      return;
+    }
+
+    const fullname = form.fullname.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    const btnLabel = formBtn.querySelector("span");
+    const prevLabel = btnLabel ? btnLabel.textContent : "";
+    formBtn.disabled = true;
+    if (btnLabel) btnLabel.textContent = "Sending...";
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Portfolio contact form",
+          name: fullname,
+          email: email,
+          message: message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setFormFeedback("success", "Message sent. Thank you!");
+        form.reset();
+      } else {
+        setFormFeedback(
+          "error",
+          (data.message && String(data.message)) || "Could not send. Please try again or email ycheon@cs.stonybrook.edu."
+        );
+      }
+    } catch (err) {
+      setFormFeedback("error", "Network error. Please try again later or email ycheon@cs.stonybrook.edu.");
+    } finally {
+      formBtn.disabled = false;
+      if (btnLabel) btnLabel.textContent = prevLabel;
+    }
   });
 }
 

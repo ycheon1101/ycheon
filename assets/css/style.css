@@ -1984,6 +1984,21 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.form-feedback {
+  margin-top: 14px;
+  font-size: var(--fs-6);
+  line-height: 1.5;
+  color: var(--light-gray);
+}
+
+.form-feedback[data-state="success"] {
+  color: var(--orange-yellow-crayola);
+}
+
+.form-feedback[data-state="error"] {
+  color: var(--bittersweet-shimmer);
+}
+
 
 
 

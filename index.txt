@@ -91,7 +91,7 @@ I began my journey as a master's student in Computer Science at Stony Brook Univ
 
 alt = Stony Brook University logo
 Graduated Cum Laude with a B.S. in Computer Science from Stony Brook University
-December 19, 2024
+Dec 19, 2024
 I graduated Cum Laude from Stony Brook University with a B.S. in Computer Science and a specialization in Artificial Intelligence and Data Science.
 
 alt = IGC Research Showcase poster presentation photo
@@ -108,6 +108,11 @@ alt = Stony Brook University logo
 Accepted to the B.S./M.S. Program in Computer Science at Stony Brook University
 Jan 12, 2024
 I was accepted to the combined B.S./M.S. Program in Computer Science at Stony Brook University.
+
+alt = Autonomous delivery robot at collaborative project demonstration
+Joined a Collaborative Delivery Robot Project with Yonsei University
+Jun 2022
+I joined a collaborative delivery robot project with Yonsei University. I contributed to a camera-based perception system for detecting food damage during transit and verifying customer receipt.
 
 alt = SUNY Korea and Stony Brook University logos
 Began My B.S. in Computer Science at SUNY Korea

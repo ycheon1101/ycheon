@@ -538,7 +538,7 @@
                     <div class="news-modal-row">
                       <img src="./assets/images/news-sbu-gta.png" alt="Stony Brook University logo" data-testimonials-avatar>
                       <div class="news-modal-text">
-                        <time datetime="2024-12-19" data-testimonials-date>December 19, 2024</time>
+                        <time datetime="2024-12-19" data-testimonials-date>Dec 19, 2024</time>
                         <h4 class="h4" data-testimonials-title>Graduated Cum Laude with a B.S. in Computer Science from Stony Brook University</h4>
                       </div>
                     </div>
@@ -592,6 +592,22 @@
                     </div>
                     <div data-testimonials-text>
                       <p>I was accepted to the combined B.S./M.S. Program in Computer Science at Stony Brook University.</p>
+                    </div>
+                    <button class="news-open-btn" type="button" data-news-open-detail>
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li class="news-modal-item" data-testimonials-item>
+                    <div class="news-modal-row">
+                      <img src="./assets/images/news-delivery-robot-yonsei-2022.png" alt="Autonomous delivery robot at collaborative project demonstration" data-testimonials-avatar>
+                      <div class="news-modal-text">
+                        <time datetime="2022-06-01" data-testimonials-date>Jun 2022</time>
+                        <h4 class="h4" data-testimonials-title>Joined a Collaborative Delivery Robot Project with Yonsei University</h4>
+                      </div>
+                    </div>
+                    <div data-testimonials-text>
+                      <p>I joined a collaborative delivery robot project with Yonsei University. I contributed to a camera-based perception system for detecting food damage during transit and verifying customer receipt.</p>
                     </div>
                     <button class="news-open-btn" type="button" data-news-open-detail>
                       <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -1189,10 +1205,12 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
+
+            <p class="form-feedback" data-form-feedback hidden role="status"></p>
 
           </form>
 
