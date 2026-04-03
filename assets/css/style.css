@@ -468,24 +468,6 @@ main {
   filter: brightness(0) invert(0.72);
 }
 
-@media (max-width: 1249px) {
-  .social-item .social-link { font-size: 30px; }
-
-  .social-link-resume .social-resume-img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media (min-width: 1250px) {
-  .social-item .social-link { font-size: 20px; }
-
-  .social-link-resume .social-resume-img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
 .social-link-resume:hover .social-resume-img,
 .social-link-resume:focus .social-resume-img {
   filter: brightness(0) invert(0.88);
@@ -2283,4 +2265,42 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/**
+ * Sidebar social: ion-icon (Shadow DOM) needs explicit size on the host.
+ * Row layout (viewport < 1250): 30px. Column layout (≥ 1250): 20px.
+ */
+@media (max-width: 1249px) {
+  .sidebar .social-item > .social-link {
+    font-size: 30px;
+  }
+
+  .sidebar .social-item > .social-link:not(.social-link-resume) ion-icon {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .sidebar .social-link-resume .social-resume-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .sidebar .social-item > .social-link {
+    font-size: 20px;
+  }
+
+  .sidebar .social-item > .social-link:not(.social-link-resume) ion-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidebar .social-link-resume .social-resume-img {
+    width: 20px;
+    height: 20px;
+  }
 }
