@@ -720,8 +720,13 @@ main {
 }
 
 .testimonials-list.news-list {
-  margin: 0 -15px;
-  padding: 6px 15px 20px;
+  margin: 0;
+  padding: 6px 0 20px;
+}
+
+/* News shows one main card: keep full width at all breakpoints */
+.testimonials-list.news-list .testimonials-item {
+  min-width: 100%;
 }
 
 .testimonials-item {
@@ -2173,8 +2178,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .testimonials-list.news-list {
-    margin: 0 -30px;
-    padding: 8px 30px 24px;
+    margin: 0;
+    padding: 8px 0 24px;
   }
 
   .content-card {
@@ -2331,7 +2336,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: 700px; }
 
-  .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
+  /* Match base (20px); 100px was shrinking the News block vs. other sections */
+  .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
 
 
 
