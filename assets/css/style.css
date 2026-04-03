@@ -464,8 +464,17 @@ main {
 
 .social-link-resume .social-resume-img {
   display: block;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   filter: brightness(0) invert(0.72);
+}
+
+.sidebar .social-svg {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
 }
 
 .social-link-resume:hover .social-resume-img,
@@ -2265,28 +2274,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
-}
-
-/**
- * Sidebar social: profile row / avatar left (max-width 1249px) → 30px; column (min-width 1250px) → 20px.
- */
-.sidebar .social-svg {
-  display: block;
-  flex-shrink: 0;
-}
-
-@media (max-width: 1249px) {
-  .sidebar .social-svg,
-  .sidebar .social-link-resume .social-resume-img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media (min-width: 1250px) {
-  .sidebar .social-svg,
-  .sidebar .social-link-resume .social-resume-img {
-    width: 20px;
-    height: 20px;
-  }
 }
