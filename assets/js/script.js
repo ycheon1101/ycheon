@@ -141,6 +141,7 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 const PAGE_KEYS = new Set([
   "about",
+  "publications",
   "resume",
   "ongoing",
   "projects",
@@ -244,6 +245,12 @@ if (projectBackBtn) {
     showPage("projects");
   });
 }
+
+document.querySelectorAll('[data-page="publications"] .blog-post-item > a[href="#"]').forEach(function (anchor) {
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+});
 
 const initialPage = getPageFromPath();
 showPage(initialPage, { skipHistory: true });
