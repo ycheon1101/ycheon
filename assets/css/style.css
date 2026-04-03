@@ -432,6 +432,21 @@ main {
   font-size: var(--fs-7);
 }
 
+/* tel:/mailto: default to blue on mobile; explicit links + auto-detected wrappers */
+.contact-info a.contact-link {
+  text-decoration: none;
+}
+
+.contact-info a.contact-link:visited {
+  color: var(--white-2);
+}
+
+.contact-info a[href^="tel:"],
+.contact-info a[href^="mailto:"] {
+  color: var(--white-2);
+  text-decoration: none;
+}
+
 .contact-info address { font-style: normal; }
 
 .social-list {
