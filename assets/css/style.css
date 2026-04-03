@@ -346,24 +346,12 @@ main {
   background: hsla(240, 1%, 17%, 0.45);
 }
 
-.sidebar-contacts-card {
-  padding: 12px;
-}
-
 .sidebar-icons-card {
   padding: 10px 12px;
 }
 
 .sidebar-icons-card .social-list {
   padding-bottom: 0;
-}
-
-@media (max-width: 1249px) {
-  .sidebar:not(.active) .sidebar-contacts-card {
-    padding: 0;
-    border-color: transparent;
-    background: transparent;
-  }
 }
 
 .avatar-box {
@@ -453,31 +441,18 @@ main {
   width: calc(100% - 46px);
 }
 
-/* Sidebar contacts: keep ion icons, drop squared icon-box chrome */
-.sidebar .contacts-list .icon-box {
-  position: static;
+/* Sidebar contacts: icons only (no icon-box wrapper) */
+.sidebar .contacts-list .contact-icon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--orange-yellow-crayola);
-}
-
-.sidebar .contacts-list .icon-box::before {
-  content: none;
-  display: none;
-}
-
-.sidebar .contacts-list .icon-box ion-icon {
   font-size: 22px;
   width: 22px;
   height: 22px;
+  color: var(--orange-yellow-crayola);
+  --ionicon-stroke-width: 32px;
 }
 
-.sidebar .contacts-list .icon-box img {
+.sidebar .contacts-list .contact-icon-img {
+  flex-shrink: 0;
   width: 22px;
   height: 22px;
   object-fit: contain;
