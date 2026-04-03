@@ -445,13 +445,13 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .social-link-resume .social-resume-img {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   filter: brightness(0) invert(0.72);
 }
