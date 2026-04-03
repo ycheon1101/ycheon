@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-  <!-- LinkedIn-style badge: solid rounded square, "CV" punched through (transparent) -->
+  <!-- LinkedIn-style badge; CV cutouts stretched wider (horizontal scale on stencil) -->
   <defs>
     <mask id="resumeCvStencil">
       <rect width="24" height="24" fill="#000"/>
-      <rect x="3" y="3" width="18" height="18" rx="2.75" ry="2.75" fill="#fff"/>
-      <text
-        x="12"
-        y="16.35"
-        text-anchor="middle"
-        font-family="system-ui, -apple-system, 'Segoe UI', 'Arial Black', Arial, sans-serif"
-        font-size="8.65"
-        font-weight="900"
-        letter-spacing="0.08em"
-        fill="#000"
-      >CV</text>
+      <rect x="2.85" y="2.85" width="18.3" height="18.3" rx="2.85" ry="2.85" fill="#fff"/>
+      <g fill="#000" transform="translate(12 12) scale(1.62 1.12) translate(-12 -12)">
+        <text
+          x="12"
+          y="12"
+          text-anchor="middle"
+          dominant-baseline="central"
+          font-family="system-ui, -apple-system, 'Segoe UI', 'Arial Black', Arial, sans-serif"
+          font-size="8.15"
+          font-weight="900"
+          letter-spacing="0.1em"
+          fill="#000"
+        >CV</text>
+      </g>
     </mask>
   </defs>
   <rect width="24" height="24" fill="#000" mask="url(#resumeCvStencil)"/>
