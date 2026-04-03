@@ -178,6 +178,10 @@ function getPageFromPath() {
 }
 
 function buildPageUrl(pageKey) {
+  if (pageKey === "about") {
+    if (appBase === "/") return "/";
+    return appBase.replace(/\/$/, "") || "/";
+  }
   if (appBase === "/") {
     return "/" + pageKey;
   }
@@ -241,4 +245,12 @@ if (projectBackBtn) {
   });
 }
 
-showPage(getPageFromPath(), { skipHistory: true });
+const initialPage = getPageFromPath();
+showPage(initialPage, { skipHistory: true });
+
+if (initialPage === "about") {
+  const segments = normalizePathname().split("/").filter(Boolean);
+  if (segments.length && segments[segments.length - 1] === "about") {
+    history.replaceState({ page: "about" }, "", buildPageUrl("about"));
+  }
+}
