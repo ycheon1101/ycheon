@@ -458,6 +458,16 @@ main {
   padding-left: 7px;
 }
 
+/* Sidebar: align LinkedIn/GitHub/resume row to avatar width (not full card width) */
+.social-list.sidebar-social {
+  max-width: 80px;
+  margin-inline: auto;
+  padding-left: 0;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 10px; /* 3×20px icons + 2×10px gaps = 80px to match avatar before 580px */
+}
+
 .social-item .social-link {
   color: var(--light-gray-70);
   font-size: 20px;
@@ -1709,6 +1719,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 120px; }
 
+  .social-list.sidebar-social {
+    max-width: 120px;
+    gap: 15px;
+  }
+
   .info-content .name { margin-bottom: 15px; }
 
   .info-content .title { padding: 5px 18px; }
@@ -2222,6 +2237,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
+  .avatar-box {
+    display: flex;
+    justify-content: center;
+  }
+
   .avatar-box img { width: 150px; }
 
   .info-content .name {
@@ -2259,6 +2279,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .social-list { justify-content: center; }
+
+  .social-list.sidebar-social { max-width: 150px; }
 
 
 
