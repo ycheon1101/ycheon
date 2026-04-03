@@ -354,35 +354,6 @@ main {
   padding-bottom: 0;
 }
 
-/* Small screens: full-width bar, icons at edges (like before) */
-@media (max-width: 767px) {
-  .sidebar-card.sidebar-icons-card {
-    width: 100%;
-    align-self: stretch;
-  }
-
-  .sidebar-icons-card .social-list.sidebar-social {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0;
-  }
-}
-
-/* Tablet/desktop: compact centered strip (no huge gaps between icons) */
-@media (min-width: 768px) {
-  .sidebar-card.sidebar-icons-card {
-    width: fit-content;
-    max-width: 100%;
-    align-self: center;
-  }
-
-  .sidebar-icons-card .social-list.sidebar-social {
-    width: auto;
-    justify-content: center;
-    gap: 22px;
-  }
-}
-
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
