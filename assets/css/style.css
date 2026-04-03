@@ -1195,6 +1195,7 @@ main {
   font-size: var(--fs-5);
   line-height: 1.2;
   overflow-wrap: anywhere;
+  text-transform: none;
 }
 
 .news-modal-item [data-testimonials-text] {

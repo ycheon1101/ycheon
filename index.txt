@@ -84,6 +84,35 @@ Started as a Computer Graphics Graduate Teaching Assistant
 Aug 25, 2025
 I started as a Computer Graphics Graduate Teaching Assistant at Stony Brook University.
 
+alt = Stony Brook University logo
+Started My M.S. in Computer Science at Stony Brook University
+Jan 17, 2025
+I began my journey as a master's student in Computer Science at Stony Brook University.
+
+alt = Stony Brook University logo
+Graduated Cum Laude with a B.S. in Computer Science from Stony Brook University
+December 19, 2024
+I graduated Cum Laude from Stony Brook University with a B.S. in Computer Science and a specialization in Artificial Intelligence and Data Science.
+
+alt = IGC Research Showcase poster presentation photo
+Presented a Poster on Unsupervised Domain Adaptation at the 2024 IGC Research Showcase
+May 10, 2024
+I presented a poster on my ongoing research in unsupervised domain adaptation at the 2024 IGC Research Showcase.
+
+alt = Computer vision demo with detection and tracking for automated attendance
+Won 3rd Prize at the SUNY Korea SKCS Hackathon
+Apr, 2024
+Our team won 3rd Prize at the SUNY Korea SKCS Hackathon for developing an automated student attendance management system and website. I was responsible for building the computer vision component using object detection and tracking techniques.
+
+alt = Stony Brook University logo
+Accepted to the B.S./M.S. Program in Computer Science at Stony Brook University
+Jan 12, 2024
+I was accepted to the combined B.S./M.S. Program in Computer Science at Stony Brook University.
+
+alt = SUNY Korea and Stony Brook University logos
+Began My B.S. in Computer Science at SUNY Korea
+Feb 2020
+I began my undergraduate studies in Computer Science at SUNY Korea.
 
 ## publications (on About)
 
@@ -100,7 +129,7 @@ Aug 17, 2026
 
 Publications
 
-ICPR 2026 · 2026
+ICPR 2026 ? 2026
 Dual-Foundation Models for Unsupervised Domain Adaptation
 Yerin Cheon, Aruna Balasubramanian, and Francois Rameau. International Conference on Pattern Recognition (ICPR 2026). Conference dates: Aug 17-20, 2026.
 
