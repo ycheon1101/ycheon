@@ -320,17 +320,27 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar-social {
-  margin-top: 4px;
-  padding-bottom: 2px;
-}
-
 .sidebar-info {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
+}
+
+/* Avatar + social strip: width follows photo (inline-flex shrink-to-fit) */
+.sidebar-profile-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 100%;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.sidebar-social-wrap {
+  width: 100%;
+  padding-bottom: 2px;
 }
 
 .avatar-box {
@@ -458,10 +468,8 @@ main {
   padding-left: 0;
 }
 
-/* Match avatar img width; space-between → LinkedIn left / resume right align to photo edges */
 .social-list.sidebar-social {
-  width: 80px;
-  max-width: 100%;
+  width: 100%;
   justify-content: space-between;
   gap: 0;
   box-sizing: border-box;
@@ -1724,8 +1732,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 120px; }
 
-  .social-list.sidebar-social { width: 120px; }
-
   .info-content .name { margin-bottom: 15px; }
 
   .info-content .title { padding: 5px 18px; }
@@ -2239,6 +2245,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
+  .sidebar-profile-stack {
+    align-self: center;
+  }
+
   .avatar-box {
     display: flex;
     justify-content: center;
@@ -2279,16 +2289,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 15px 0;
     opacity: 0;
   }
-
-  .social-list { justify-content: center; }
-
-  .social-list.sidebar-social {
-    width: 150px;
-    justify-content: space-between;
-    margin-inline: auto;
-  }
-
-
 
   /**
 	 * RESUME
