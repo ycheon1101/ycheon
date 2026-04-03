@@ -1,27 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-  <!-- CV on document, folded top-right; transparent background -->
-  <path
-    stroke="#000"
-    stroke-width="1.4"
-    stroke-linejoin="round"
-    d="M4.75 3.75h8.5l6 6v10.5h-14.5v-16.5z"
-  />
-  <path
-    stroke="#000"
-    stroke-width="1.4"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M13.25 3.75v6h6"
-  />
-  <text
-    x="12"
-    y="11.2"
-    text-anchor="middle"
-    font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
-    font-size="6.2"
-    font-weight="700"
-    fill="#000"
-  >CV</text>
-  <rect x="5.25" y="13.85" width="13.5" height="2.35" rx="1.15" fill="#000"/>
-  <rect x="5.25" y="17.15" width="13.5" height="2.35" rx="1.15" fill="#000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <!-- LinkedIn-style badge: solid rounded square, "CV" punched through (transparent) -->
+  <defs>
+    <mask id="resumeCvStencil">
+      <rect width="24" height="24" fill="#000"/>
+      <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="2.75" ry="2.75" fill="#fff"/>
+      <text
+        x="12"
+        y="15.65"
+        text-anchor="middle"
+        font-family="system-ui, -apple-system, 'Segoe UI', 'Arial Black', Arial, sans-serif"
+        font-size="7.35"
+        font-weight="900"
+        letter-spacing="-0.03em"
+        fill="#000"
+      >CV</text>
+    </mask>
+  </defs>
+  <rect width="24" height="24" fill="#000" mask="url(#resumeCvStencil)"/>
 </svg>
