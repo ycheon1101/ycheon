@@ -328,19 +328,46 @@ main {
   gap: 15px;
 }
 
-/* Avatar + social strip: width follows photo (inline-flex shrink-to-fit) */
-.sidebar-profile-stack {
+/* Left column: profile+contacts card, then icons card (same width as column) */
+.sidebar-primary-col {
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 10px;
   max-width: 100%;
-  gap: 4px;
   flex-shrink: 0;
 }
 
-.sidebar-social-wrap {
+.sidebar-card {
   width: 100%;
-  padding-bottom: 2px;
+  box-sizing: border-box;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  background: hsla(240, 1%, 17%, 0.45);
+}
+
+.sidebar-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 12px;
+}
+
+.sidebar-profile-card .avatar-box {
+  align-self: center;
+}
+
+.sidebar-profile-card .sidebar-info_more {
+  margin-top: 4px;
+}
+
+.sidebar-icons-card {
+  padding: 10px 12px;
+}
+
+.sidebar-icons-card .social-list {
+  padding-bottom: 0;
 }
 
 .avatar-box {
@@ -2245,7 +2272,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .sidebar-profile-stack {
+  .sidebar-primary-col {
     align-self: center;
   }
 
