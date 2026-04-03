@@ -2268,16 +2268,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /**
- * Sidebar social: ion-icon (Shadow DOM) needs explicit size on the host.
+ * Sidebar social: plain SVG (ion-icon Shadow DOM ignored external width/font-size).
  * Row layout (viewport < 1250): 30px. Column layout (≥ 1250): 20px.
  */
-@media (max-width: 1249px) {
-  .sidebar .social-item > .social-link {
-    font-size: 30px;
-  }
+.sidebar .social-svg {
+  display: block;
+  flex-shrink: 0;
+}
 
-  .sidebar .social-item > .social-link:not(.social-link-resume) ion-icon {
-    font-size: 30px;
+@media (max-width: 1249px) {
+  .sidebar .social-svg {
     width: 30px;
     height: 30px;
   }
@@ -2289,12 +2289,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 @media (min-width: 1250px) {
-  .sidebar .social-item > .social-link {
-    font-size: 20px;
-  }
-
-  .sidebar .social-item > .social-link:not(.social-link-resume) ion-icon {
-    font-size: 20px;
+  .sidebar .social-svg {
     width: 20px;
     height: 20px;
   }
