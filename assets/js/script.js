@@ -21,12 +21,16 @@ const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
+const testimonialsModal = document.querySelector(".testimonials-modal");
 
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalDate = document.querySelector("[data-modal-date]");
 const modalText = document.querySelector("[data-modal-text]");
+const newsBackBtn = document.querySelector("[data-news-back-btn]");
+const newsOpenBtns = document.querySelectorAll("[data-news-open-detail]");
+const newsModalItems = document.querySelectorAll(".news-modal-item[data-testimonials-item]");
 
 // modal open/close (avoid toggle while clicking inside the open modal)
 const testimonialsModalOpen = function () {
@@ -37,6 +41,14 @@ const testimonialsModalOpen = function () {
 const testimonialsModalClose = function () {
   modalContainer.classList.remove("active");
   overlay.classList.remove("active");
+  if (testimonialsModal) {
+    testimonialsModal.classList.remove("news-detail-active");
+  }
+}
+
+const setNewsDetailMode = function (isDetail) {
+  if (!testimonialsModal) { return; }
+  testimonialsModal.classList.toggle("news-detail-active", isDetail);
 }
 
 const openTestimonialsModalFrom = function (itemEl) {
@@ -73,7 +85,7 @@ const openTestimonialsModalFrom = function (itemEl) {
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
 
-  if (testimonialsItem[i].closest(".news-item")) { continue; }
+  if (testimonialsItem[i].closest(".news-item") || testimonialsItem[i].classList.contains("news-modal-item")) { continue; }
 
   testimonialsItem[i].addEventListener("click", function () {
     openTestimonialsModalFrom(this);
@@ -81,12 +93,38 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
-// News: icon opens modal; news card itself is not clickable
+// News: icon opens list-only modal; news card itself is not clickable
 const newsMoreBtn = document.querySelector("[data-news-more-btn]");
-const newsCardModalRoot = document.querySelector(".news-item [data-testimonials-item]");
-if (newsMoreBtn && newsCardModalRoot) {
+if (newsMoreBtn) {
   newsMoreBtn.addEventListener("click", function () {
-    openTestimonialsModalFrom(newsCardModalRoot);
+    setNewsDetailMode(false);
+    testimonialsModalOpen();
+  });
+}
+
+// News list arrows: open detail mode for the selected item
+for (let i = 0; i < newsOpenBtns.length; i++) {
+  newsOpenBtns[i].addEventListener("click", function () {
+    const newsItem = this.closest("[data-testimonials-item]");
+    if (!newsItem) { return; }
+    openTestimonialsModalFrom(newsItem);
+    setNewsDetailMode(true);
+  });
+}
+
+// News list cards: clicking anywhere opens detail mode
+for (let i = 0; i < newsModalItems.length; i++) {
+  newsModalItems[i].addEventListener("click", function (event) {
+    // Keep button click behavior, but allow full-card click too.
+    if (event.target.closest("[data-news-open-detail]")) { return; }
+    openTestimonialsModalFrom(this);
+    setNewsDetailMode(true);
+  });
+}
+
+if (newsBackBtn) {
+  newsBackBtn.addEventListener("click", function () {
+    setNewsDetailMode(false);
   });
 }
 

@@ -997,7 +997,7 @@ main {
   box-shadow: var(--shadow-5);
   transform: scale(1.2);
   opacity: 0;
-  transition: var(--transition-1);
+  transition: transform var(--transition-1), opacity var(--transition-1);
   z-index: 2;
   width: min(1180px, calc(100vw - 96px));
   max-width: none;
@@ -1010,8 +1010,8 @@ main {
 
 .modal-close-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 8px;
+  right: 8px;
   background: var(--onyx);
   border-radius: 8px;
   width: 32px;
@@ -1096,28 +1096,28 @@ main {
 /* News list inside the testimonials modal */
 .news-modal-layout {
   display: grid;
-  grid-template-columns: 330px minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
   align-items: start;
+  width: 100%;
 }
 
 .news-modal-main {
   min-width: 0;
-  grid-column: 2;
-  grid-row: 1;
-  display: flex;
+  grid-column: 1;
+  display: none;
   align-items: flex-start;
   gap: 16px;
 }
 
 .news-modal-side {
   grid-column: 1;
-  grid-row: 1;
   background: var(--border-gradient-onyx);
   border: 1px solid var(--jet);
   border-radius: 12px;
   padding: 6px 12px 12px;
-  align-self: start;
+  align-self: stretch;
+  width: 100%;
   margin-top: 0;
 }
 
@@ -1153,11 +1153,12 @@ main {
 }
 
 .news-modal-item {
+  position: relative;
   cursor: pointer;
   background: var(--border-gradient-onyx);
   border: 1px solid var(--jet);
   border-radius: 14px;
-  padding: 15px 18px;
+  padding: 15px 48px 15px 18px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
 }
@@ -1200,6 +1201,100 @@ main {
   display: none; /* JS copies content into the modal */
 }
 
+.news-open-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
+  border: 1px solid var(--jet);
+}
+
+.news-open-btn ion-icon {
+  font-size: 15px;
+}
+
+.news-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: var(--orange-yellow-crayola);
+  background: transparent;
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: var(--fs-7);
+}
+
+.testimonials-modal.news-detail-active .news-modal-layout {
+  grid-template-columns: 1fr;
+}
+
+.testimonials-modal.news-detail-active .news-modal-side {
+  display: none;
+}
+
+.testimonials-modal.news-detail-active .news-modal-main {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+
+.testimonials-modal.news-detail-active .news-back-btn {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  justify-self: start;
+  margin: 0;
+}
+
+/* List-only mode: remove wide empty space */
+.testimonials-modal:not(.news-detail-active) {
+  width: min(700px, calc(100vw - 40px)) !important;
+  padding: 42px 8px 12px 10px;
+}
+
+.testimonials-modal:not(.news-detail-active) .modal-close-btn {
+  top: 4px;
+  right: 6px;
+}
+
+.testimonials-modal:not(.news-detail-active) .news-modal-side {
+  padding-right: 2px;
+}
+
+.testimonials-modal:not(.news-detail-active) .news-modal-list {
+  padding-right: 0;
+}
+
+/* Detail-only mode: use moderate width since list is hidden */
+.testimonials-modal.news-detail-active {
+  width: min(1020px, calc(100vw - 56px)) !important;
+}
+
+.testimonials-modal.news-detail-active .modal-img-wrapper {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 0;
+}
+
+.testimonials-modal.news-detail-active .news-modal-main .modal-content {
+  grid-column: 2;
+  grid-row: 2;
+}
+
 .news-extra-hidden {
   display: none;
 }
@@ -1226,14 +1321,11 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .news-modal-main {
-    display: block;
-  }
+  .testimonials-modal.news-detail-active .news-modal-main { display: block; }
 
   .news-modal-main,
   .news-modal-side {
     grid-column: auto;
-    grid-row: auto;
   }
 
   .news-modal-side {
